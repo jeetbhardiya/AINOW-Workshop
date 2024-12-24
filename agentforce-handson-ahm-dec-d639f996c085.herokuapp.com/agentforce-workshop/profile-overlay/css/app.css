@@ -1,0 +1,245 @@
+/* -----------------------
+Font styles
+------------------------*/
+@font-face {
+  font-family: "SalesforceSans-Regular";
+  src: url("../../../fonts/SalesforceSans-Regular.html") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ITC Avant Garde";
+  src: url("../../../fonts/AvantGardeForSalesforceW05-Dm.html") format("woff2");
+  font-weight: 400;
+}
+
+/* -----------------------
+Base styles
+------------------------*/
+:root {
+  --primary-color: rgb(3, 45, 96);
+  --secondary-color: rgb(1, 118, 211);
+  --button-primary-color: rgb(1, 118, 211);
+  --button-hover-color: rgb(232, 232, 232);
+  --overlay-color: rgba(1, 118, 211, 0.9);
+}
+
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  h1 {
+    font-size: 1.5em;
+  }
+  .equation {
+    flex-direction: column;
+  }
+}
+
+header {
+  height: 20px;
+  text-align: center;
+  margin: 20px 0 0 0;
+  background-color: transparent;
+}
+
+.content {
+  padding: 1em 1.25em;
+}
+@media (min-width: 42em) {
+  .content {
+    padding: 2em 3em;
+  }
+}
+/* -----------------------
+Button styles
+------------------------*/
+a.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+  min-height: 25px;
+  background-color: var(--button-primary-color);
+  font-family: "ITC Avant Garde", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 9px 40px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+a.button:hover,
+a.button:focus {
+  text-decoration: none;
+}
+a.button-social img {
+  margin-right: 10px;
+  max-width: 20px;
+}
+
+
+/* -----------------------
+Equations
+------------------------*/
+.equation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.equation img {
+  width: 14rem;
+}
+.operators {
+  color: var(--button-primary-color);
+  font: 900 32px sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* -----------------------
+Social Profile Pic Tool styles
+------------------------*/
+.overlay-dropzone {
+  background: #f9f9f9;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.4em;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  margin-top: 1rem;
+}
+
+.overlay-dropzone > img {
+  margin: 0 auto;
+}
+.overlay-dropzone.is-uploaded {
+  border: none;
+  background: none;
+}
+.overlay-dropzone.is-hovered {
+  border-color: #189cd7;
+}
+.overlay-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: fit-content;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+/* -----------------------
+Image croping tool
+Credit: http://tympanus.net/codrops/2014/10/30/resizing-cropping-images-canvas/
+------------------------*/
+.resize-image {
+  max-height: 500px;
+  max-width: 500px;
+}
+
+.hidden {
+  display: none;
+}
+
+.component {
+  position: relative;
+  height: 320px;
+  text-align: center;
+  margin: 0 auto 4rem;
+}
+
+.resize-container {
+  position: relative;
+  display: inline-block;
+  cursor: move;
+  margin: 0 auto;
+}
+
+.resize-container img {
+  display: block;
+}
+
+.resize-container:hover img,
+.resize-container:active img {
+  outline: 2px dashed;
+  outline-color: var(--overlay-color);
+}
+
+.resize-handle-ne,
+.resize-handle-se,
+.resize-handle-nw,
+.resize-handle-sw {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: var(--overlay-color);
+  z-index: 999;
+}
+
+.resize-handle-nw {
+  top: -5px;
+  left: -5px;
+  cursor: nw-resize;
+}
+
+.resize-handle-sw {
+  bottom: -5px;
+  left: -5px;
+  cursor: sw-resize;
+}
+
+.resize-handle-ne {
+  top: -5px;
+  right: -5px;
+  cursor: ne-resize;
+}
+
+.resize-handle-se {
+  bottom: -5px;
+  right: -5px;
+  cursor: se-resize;
+}
+
+.overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  z-index: 999;
+  width: 300px;
+  height: 300px;
+  box-sizing: content-box;
+  pointer-events: none;
+}
+
+.overlay:before {
+  top: 0;
+  margin-left: -2px;
+  margin-top: -40px;
+}
+
+.overlay:after {
+  bottom: 0;
+  margin-left: -2px;
+  margin-bottom: -40px;
+}
+
+.overlay-inner:before {
+  left: 0;
+  margin-left: -40px;
+  margin-top: -2px;
+}
+
+.overlay-inner:after {
+  right: 0;
+  margin-right: -40px;
+  margin-top: -2px;
+}
