@@ -1,0 +1,14 @@
+HTTrack3.49-2 launched on Sun, 08 Dec 2024 16:10:42 at https://agentforce-handson-ahm-dec-d639f996c085.herokuapp.com/agentforce-workshop
+(winhttrack https://agentforce-handson-ahm-dec-d639f996c085.herokuapp.com/agentforce-workshop -O "'/Users/jeetbhardiya/Downloads/AINOW" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:11:18	Error: 	"Not Found" (404) at link https://agentforce-handson-ahm-dec-d639f996c085.herokuapp.com/ (from https://agentforce-handson-ahm-dec-d639f996c085.herokuapp.com/agentforce-workshop)
+16:15:31	Error: 	"Not Found" (404) at link https://agentforce-handson-ahm-dec-d639f996c085.herokuapp.com/fonts/SalesforceSans-Regular.woff2 (from https://agentforce-handson-ahm-dec-d639f996c085.herokuapp.com/agentforce-workshop/profile-overlay/css/app.css)
+16:15:31	Error: 	"Not Found" (404) at link https://agentforce-handson-ahm-dec-d639f996c085.herokuapp.com/fonts/AvantGardeForSalesforceW05-Dm.woff2 (from https://agentforce-handson-ahm-dec-d639f996c085.herokuapp.com/agentforce-workshop/profile-overlay/css/app.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 49 seconds : 290 links scanned, 286 files written (10679910 bytes overall) [8596456 bytes received at 29745 bytes/sec], 2886841 bytes transferred using HTTP compression in 95 files, ratio 19%, 58.0 requests per connection
+(3 errors, 0 warnings, 0 messages)
